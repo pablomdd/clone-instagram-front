@@ -36,9 +36,17 @@ nav .nav-line{
 .card-profile-pic{
   /* height: 25px; */
   max-width: 45px;
+  max-height: 45px;
   border-radius: 50%;
 }
 
 .post-image{
   max-width: 100%;
+}
+
+/* ----- Profile----- */
+.profile-pic{
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 50%;
 }
