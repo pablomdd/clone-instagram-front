@@ -1,7 +1,5 @@
 import React from "react"
 import {Route} from "react-router-dom"
-
-//TODO create Home, Login
 import Home from "./views/Home"
 import Login from "./views/Login"
 

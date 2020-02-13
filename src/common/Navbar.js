@@ -12,7 +12,7 @@ class Navbar extends Component {
 
     render() {// Pintar UI
         return (
-          <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+          <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
             <div className="container">
               <a className="navbar-brand" href="#">
                 Instagram 
