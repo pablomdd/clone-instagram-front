@@ -12,7 +12,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
- 
+
+
+/* ----Navbar----- */
+/* nav .bg-light{
+  background-color: #c71f1f !important;
+} */
+nav .nav-line{
+  width: 1px;
+  border-left: 4px solid black;
+}
+
+.instagram_logo{
+  max-height: 40px;
+} 
+
+
 /* -----Card----- */
 .card-header{
   background-color: #ffffff;

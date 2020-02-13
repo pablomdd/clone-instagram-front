@@ -23,7 +23,7 @@ function Home() {
                 <h6 className="">pablomdd</h6>
               </div>
               <div className="row">
-                <p className=" text-muted">Pablo Domínguez Durán</p>
+                <p className="text-muted">Pablo Domínguez Durán</p>
               </div>
             </div>
           </div>
