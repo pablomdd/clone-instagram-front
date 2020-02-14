@@ -18,11 +18,14 @@ const LOGIN = gql`
   }
 `;
 
-function Login() {
+function Login(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [execMutation, { data, loading, error }] = useMutation(LOGIN);
-  if (!loading) console.log(data);
+  if (!loading && data){
+    localStorage.setItem('token',data.login.token)
+    props.history.push('/')
+  } 
 
   const submit = event => {
     event.preventDefault();

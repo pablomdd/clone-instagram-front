@@ -11,7 +11,7 @@ function Profile() {
 
   return (
     <Layout>
-      <header className="row profile-header">
+      <header className="row profile-header my-3">
         <div className="container">
           <div className="row">
             <div className="col-md-3 d-flex justify-content-center align-items-center">
@@ -50,39 +50,38 @@ function Profile() {
       </header>
       <main className="gallery-container">
         <div className="gallery">
-          <div class="gallery-item" tabindex="0">
-            <img
-              src="https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?w=500&h=500&fit=crop"
-              class="gallery-image"
-              alt=""
-            />
-
-            <div class="gallery-item-info">
-              <ul>
-                <li class="gallery-item-likes">
-                  <span class="visually-hidden">Likes:</span>
-                  <i class="fas fa-heart" aria-hidden="true"></i> 56
-                </li>
-                <li class="gallery-item-comments">
-                  <span class="visually-hidden">Comments:</span>
-                  <i class="fas fa-comment" aria-hidden="true"></i> 2
-                </li>
-              </ul>
-            </div>
-          </div>
-
           <PostItem
-            url_source="https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?w=500&h=500&fit=crop"
+            src="https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?w=500&h=500&fit=crop"
             likes="55"
             comments="10"
           />
           <PostItem
-            url_source="https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?w=500&h=500&fit=crop"
+            src="https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?w=500&h=500&fit=crop"
             likes="55"
             comments="10"
           />
           <PostItem
-            url_source="https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?w=500&h=500&fit=crop"
+            src="https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?w=500&h=500&fit=crop"
+            likes="55"
+            comments="10"
+          />
+          <PostItem
+            src="https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?w=500&h=500&fit=crop"
+            likes="55"
+            comments="10"
+          />
+          <PostItem
+            src="https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?w=500&h=500&fit=crop"
+            likes="55"
+            comments="10"
+          />
+          <PostItem
+            src="https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?w=500&h=500&fit=crop"
+            likes="55"
+            comments="10"
+          />
+          <PostItem
+            src="https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?w=500&h=500&fit=crop"
             likes="55"
             comments="10"
           />
@@ -90,12 +89,12 @@ function Profile() {
       </main>
 
       <div className="row">
-        <div className="col-md-8">
+        {/* <div className="col-md-8">
           <Card></Card>
           <Card></Card>
           <Card></Card>
-        </div>
-        <div className="col-md-4 mt-3">
+        </div> */}
+        {/* <div className="col-md-4 mt-3">
           <div className="card-header d-flex">
             <img
               className="card-profile-pic  w-25"
@@ -107,7 +106,7 @@ function Profile() {
               <p className="text-muted ml-2 small">Pablo Domínguez Durán</p>
             </div>
           </div>
-          {/* card de stories */}
+          
           <div className="card bg-light mb-3 mt-3">
             <div className="card-header d-flex justify-content-between">
               <span className="text-muted font-weight-bold">Stories</span>
@@ -121,8 +120,10 @@ function Profile() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
+    
+    
     </Layout>
   );
 }

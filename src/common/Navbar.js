@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fab, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faCompass, faHeart, faUser } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+// import payload from '../utils/payload';
+
 const instagram_logo =
   "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png";
 
@@ -14,8 +16,7 @@ class Navbar extends Component {
     //Inicializa el estado
     super(props);
     this.state = {
-      num: 1,
-      data: []
+      token: localStorage.getItem("token")
     };
   }
 
@@ -52,37 +53,25 @@ class Navbar extends Component {
               />
             </Link>
 
-            <div className="ml-auto">
-              <FontAwesomeIcon icon={faCompass} size="2x mr-4" />
-              <FontAwesomeIcon icon={faHeart} size="2x mr-4" />
-              <Link to="/profile">
-                <FontAwesomeIcon icon={faUser} size="2x" />
-              </Link>
-            </div>
-
-            {/* <ul className="navbar-nav ml-auto">
-              <li className="nav-item active">
-                <a className="nav-link" href="#">
-                  Home
-                  <span className="sr-only">(current)</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  About
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Services
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Contact
-                </a>
-              </li>
-            </ul> */}
+            {this.state.token ? (
+              <>
+                <div className="ml-auto">
+                  <FontAwesomeIcon icon={faCompass} size="2x mr-4" />
+                  <FontAwesomeIcon icon={faHeart} size="2x mr-4" />
+                  <Link to="/profile">
+                    <FontAwesomeIcon icon={faUser} size="2x" />
+                  </Link>
+                </div>
+              </>
+            ) : (
+              <>
+                <Link className="ml-auto" to="/login">
+                  <button type="button" class="ml-auto btn btn-success">
+                    <span className="text-bold">Regístrate</span>
+                  </button>
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </nav>

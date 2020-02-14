@@ -1,44 +1,51 @@
 import React from "react";
+import {Link} from "react-router-dom"
 import Layout from "../common/Layout";
 import Card from "../components/Card";
+import payload from '../utils/payload';
+//TODO: agregar props a Card
 
 function Home() {
   return (
     <Layout>
       <div className="row">
         <div className="col-md-8">
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
+          <Card
+            profile_pic="https://pbs.twimg.com/profile_images/1129433578100678663/ncsC3UcT_400x400.png"
+            media="https://newsweekespanol.com/wp-content/uploads/2018/05/maxresdefault.jpg"
+            username="pablomdd"
+            description="Maravillosa vista de la cdmx 😍😍😍."
+            date="3 mins ago"
+          />
+          <Card
+            profile_pic="https://pbs.twimg.com/profile_images/1129433578100678663/ncsC3UcT_400x400.png"
+            media="https://newsweekespanol.com/wp-content/uploads/2018/05/maxresdefault.jpg"
+            username="pablomdd"
+            description="Maravillosa vista de la cdmx 😍😍😍."
+            date="3 mins ago"
+          />
+          <Card
+            profile_pic="https://pbs.twimg.com/profile_images/1129433578100678663/ncsC3UcT_400x400.png"
+            media="https://newsweekespanol.com/wp-content/uploads/2018/05/maxresdefault.jpg"
+            username="pablomdd"
+            description="Maravillosa vista de la cdmx 😍😍😍."
+            date="3 mins ago"
+          />
         </div>
         <div className="col-md-4 mt-3">
-          {/* <div className="container">
-            <div className="row d-flex justify-content-start">
+          <Link to="/profile">
+            <div className="card-header d-flex">
               <img
-                className="card-profile-pic w-25"
+                className="card-profile-pic  w-25"
                 src="https://pbs.twimg.com/profile_images/1129433578100678663/ncsC3UcT_400x400.png"
                 alt="profile pic"
               />
-              <div className="row">
-                <h6 className="">pablomdd</h6>
-              </div>
-              <div className="row">
-                <p className="text-muted">Pablo Domínguez Durán</p>
+              <div>
+                <h6 className="card-title ml-2 mb-0">pablomdd</h6>
+                <p className="text-muted ml-2 small">{payload().first_name + " " + payload().last_name}</p>
               </div>
             </div>
-          </div> */}
-
-          <div className="card-header d-flex">
-            <img
-              className="card-profile-pic  w-25"
-              src="https://pbs.twimg.com/profile_images/1129433578100678663/ncsC3UcT_400x400.png"
-              alt="profile pic"
-            />
-            <div>
-              <h6 className="card-title ml-2 mb-0">pablomdd</h6>
-              <p className="text-muted ml-2 small">Pablo Domínguez Durán</p>
-            </div>
-          </div>
+          </Link>
           {/* card de stories */}
           <div className="card bg-light mb-3 mt-3">
             <div className="card-header d-flex justify-content-between">

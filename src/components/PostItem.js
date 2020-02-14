@@ -1,28 +1,31 @@
- import React from 'react'
+import React from "react";
+import ReactDOM from "react-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { fab, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faHeart, faComment } from "@fortawesome/free-solid-svg-icons";
 
-const PostItem = (props) => {
-    return (
-        <div class="gallery-item" tabindex="0">
-            <img
-              src={props.url_source}
-              class="gallery-image"
-              alt=""
-            />
+const PostItem = props => {
+  return (
+    <div className="gallery-item" tabindex="0">
+      <img src={props.src} className="gallery-image" alt="" />
 
-            <div class="gallery-item-info">
-              <ul>
-                <li class="gallery-item-likes">
-                  <span class="visually-hidden">Likes:</span>
-                  <i class="fas fa-heart" aria-hidden="true"></i> {props.likes}
-                </li>
-                <li class="gallery-item-comments">
-                  <span class="visually-hidden">Comments:</span>
-                  <i class="fas fa-comment" aria-hidden="true"></i> {props.comments}
-                </li>
-              </ul>
-            </div>
-          </div>
-    )
-}
+      <div className="gallery-item-info">
+        <ul>
+          <li className="gallery-item-likes">
+            <span className="visually-hidden">Likes:</span>
+            {/* <i className="fas fa-heart" aria-hidden="true"></i> */}
+            <FontAwesomeIcon className="" icon={faHeart} size="1x" />{" "}
+            {props.likes}
+          </li>
+          <li className="gallery-item-comments">
+            <span className="visually-hidden">Comments:</span>
+            {/* <i className="fas fa-comment" aria-hidden="true"></i>{" "} */}
+            <FontAwesomeIcon icon={faComment} size="1x" /> {props.comments}
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+};
 
-export default PostItem
+export default PostItem;

@@ -12,7 +12,8 @@ function Routes() {
       <Route exact path="/login" component={Login} />
       {/* <Route exact path="/user/:id" component={Profile} /> */}
       <Route exact path="/profile" component={Profile} />
-      <Route exact path="/user/:id/:id" component={Profile} />/{" "}
+      <Route exact path="/user/:id/:id" component={Profile} />
+      <Route exact path="/post" component={Post} />
     </>
   );
 }

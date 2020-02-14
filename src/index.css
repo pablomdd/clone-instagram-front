@@ -7,6 +7,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(250, 250, 250);
 }
+a{
+  color: inherit;
+  text-decoration: inherit;
+  text-decoration: none;
+  /* cursor: inherit; */
+}
+
+a:hover{
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -54,12 +65,21 @@ nav .nav-line {
   max-width: 150px;
   max-height: 150px;
   border-radius: 50%;
-
+  cursor: pointer;
   background: linear-gradient(to right, red, purple);
   padding: 5px;
 }
 
-/* Gallery */
+/* -----Gallery----- */
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 .gallery-container {
   max-width: 93.5rem;
   margin: 0 auto;
@@ -128,4 +148,68 @@ nav .nav-line {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+
+/* ----- Gallery Grid ------ */
+
+@supports (display: grid) {
+  /* .profile {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: repeat(3, auto);
+      grid-column-gap: 3rem;
+      align-items: center;
+  }
+
+  .profile-image {
+      grid-row: 1 / -1;
+  } */
+
+  .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      grid-gap: 2rem;
+  }
+
+  .profile-image,
+  .profile-user-settings,
+  .profile-stats,
+  .profile-bio,
+  .gallery-item,
+  .gallery {
+      width: auto;
+      margin: 0;
+  }
+
+  @media (max-width: 40rem) {
+      .profile {
+          grid-template-columns: auto 1fr;
+          grid-row-gap: 1.5rem;
+      }
+
+      .profile-image {
+          grid-row: 1 / 2;
+      }
+/* 
+      .profile-user-settings {
+          display: grid;
+          grid-template-columns: auto 1fr;
+          grid-gap: 1rem;
+      } */
+
+      .profile-edit-btn,
+      .profile-stats,
+      .profile-bio {
+          grid-column: 1 / -1;
+      }
+
+      .profile-user-settings,
+      .profile-edit-btn,
+      .profile-settings-btn,
+      .profile-bio,
+      .profile-stats {
+          margin: 0;
+      }
+  }
 }
