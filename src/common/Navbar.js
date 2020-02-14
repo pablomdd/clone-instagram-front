@@ -4,7 +4,8 @@ import ReactDOM from "react-dom";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fab, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faCamera } from "@fortawesome/free-solid-svg-icons";
+import { faCompass, faHeart, faUser } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 const instagram_logo =
   "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png";
 
@@ -41,15 +42,25 @@ class Navbar extends Component {
           <div className="collapse navbar-collapse" id="navbarResponsive">
             {/* <FaInstagram/> */}
             {/* <img src="/assets/img/bootstrap.svg" alt="" width="32" height="32" title="Bootstrap"/> */}
-            <FontAwesomeIcon className="" icon={faInstagram} size="2x" />
-            <span class="nav-line"></span>
-            <img
-              className="instagram_logo"
-              src={instagram_logo}
-              alt="Intagram Logo"
-            />
+            <Link to="/">
+              <FontAwesomeIcon className="" icon={faInstagram} size="2x" />
+              <span class="nav-line"></span>
+              <img
+                className="instagram_logo"
+                src={instagram_logo}
+                alt="Intagram Logo"
+              />
+            </Link>
 
-            <ul className="navbar-nav ml-auto">
+            <div className="ml-auto">
+              <FontAwesomeIcon icon={faCompass} size="2x mr-4" />
+              <FontAwesomeIcon icon={faHeart} size="2x mr-4" />
+              <Link to="/profile">
+                <FontAwesomeIcon icon={faUser} size="2x" />
+              </Link>
+            </div>
+
+            {/* <ul className="navbar-nav ml-auto">
               <li className="nav-item active">
                 <a className="nav-link" href="#">
                   Home
@@ -71,7 +82,7 @@ class Navbar extends Component {
                   Contact
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </nav>
