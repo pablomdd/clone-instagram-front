@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../common/Layout";
 import Card from "../components/Card";
+import PostItem from "../components/PostItem";
 
 function Profile() {
   const ProfilePic =
@@ -10,11 +11,15 @@ function Profile() {
 
   return (
     <Layout>
-      <div className="row profile-header">
+      <header className="row profile-header">
         <div className="container">
           <div className="row">
             <div className="col-md-3 d-flex justify-content-center align-items-center">
-              <img className="profile-pic" src={ProfilePic} alt="profile pic" />
+              <img
+                className="profile-pic my-2"
+                src={ProfilePic}
+                alt="profile pic"
+              />
             </div>
             <div className="col-md-9">
               <div className="container">
@@ -33,10 +38,56 @@ function Profile() {
                   </p>
                 </div>
               </div>
+              <div className="container">
+                <div className="row d-flex flex-column justify-content-center">
+                  <h6 className="d-block mb-0">Pablo Domínguez Durán</h6>
+                  <p className="d-block">Café con leche sin azúcar</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </header>
+      <main className="gallery-container">
+        <div className="gallery">
+          <div class="gallery-item" tabindex="0">
+            <img
+              src="https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?w=500&h=500&fit=crop"
+              class="gallery-image"
+              alt=""
+            />
+
+            <div class="gallery-item-info">
+              <ul>
+                <li class="gallery-item-likes">
+                  <span class="visually-hidden">Likes:</span>
+                  <i class="fas fa-heart" aria-hidden="true"></i> 56
+                </li>
+                <li class="gallery-item-comments">
+                  <span class="visually-hidden">Comments:</span>
+                  <i class="fas fa-comment" aria-hidden="true"></i> 2
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <PostItem
+            url_source="https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?w=500&h=500&fit=crop"
+            likes="55"
+            comments="10"
+          />
+          <PostItem
+            url_source="https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?w=500&h=500&fit=crop"
+            likes="55"
+            comments="10"
+          />
+          <PostItem
+            url_source="https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?w=500&h=500&fit=crop"
+            likes="55"
+            comments="10"
+          />
+        </div>
+      </main>
 
       <div className="row">
         <div className="col-md-8">

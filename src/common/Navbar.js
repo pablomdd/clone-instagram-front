@@ -21,7 +21,7 @@ class Navbar extends Component {
   render() {
     // Pintar UI
     return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light ">
+      <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container">
           {/* <a className="navbar-brand" href="#">
                 Instagram 
@@ -41,8 +41,8 @@ class Navbar extends Component {
           <div className="collapse navbar-collapse" id="navbarResponsive">
             {/* <FaInstagram/> */}
             {/* <img src="/assets/img/bootstrap.svg" alt="" width="32" height="32" title="Bootstrap"/> */}
-            <FontAwesomeIcon icon={faInstagram} size="2x" />
-            <span class="nav-line mx-2"></span>
+            <FontAwesomeIcon className="" icon={faInstagram} size="2x" />
+            <span class="nav-line"></span>
             <img
               className="instagram_logo"
               src={instagram_logo}
