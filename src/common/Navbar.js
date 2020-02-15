@@ -65,11 +65,18 @@ class Navbar extends Component {
               </>
             ) : (
               <>
-                <Link className="ml-auto" to="/login">
-                  <button type="button" class="ml-auto btn btn-success">
-                    <span className="text-bold">Regístrate</span>
-                  </button>
-                </Link>
+                <div className="ml-auto">
+                  <Link className="mr-2" to="/login">
+                    <button type="button" class="ml-auto btn btn-primary">
+                      <span className="text-bold">Login</span>
+                    </button>
+                  </Link>
+                  <Link className="" to="/login">
+                    <button type="button" class="ml-auto btn btn-success">
+                      <span className="text-bold">Sign Up</span>
+                    </button>
+                  </Link>
+                </div>
               </>
             )}
           </div>
