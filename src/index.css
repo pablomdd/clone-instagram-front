@@ -224,3 +224,7 @@ nav .nav-line {
   margin: 0 auto;
   animation: loader 500ms linear infinite;
 }
+
+.login{
+  height: 65vh;
+}

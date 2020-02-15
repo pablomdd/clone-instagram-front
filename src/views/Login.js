@@ -34,7 +34,7 @@ function Login(props) {
 
   return (
     <Layout>
-      <div className="row my-5">
+      <div className="row login my-5">
         <form className="col-12" onSubmit={submit}>
           <div className="row justify-content-center">
             <div className="form-group col-8 ">
